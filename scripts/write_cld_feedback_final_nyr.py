@@ -442,8 +442,9 @@ if __name__ == '__main__':
     kernel_lons = np.arange(1.25, 360, 2.5)
 
     # =================== Read Isca dataset ================== #
-    base_dir = '/disco/share/ql260/data_isca/'
-    ppe_dir = P(base_dir, 'PPE_extracted_3d')
+    base_dir = '../inputs'
+    ppe_dir = P(base_dir, 'qflux_extracted_data')
+    ppe_clisccp_dir = P(base_dir, 'qflux_clisccp_data')
 
     exp_tbl = pd.read_csv('isca_qflux_exps.csv', header=0)
     exp_grps = list(exp_tbl.iloc[:, 0])
@@ -463,7 +464,7 @@ if __name__ == '__main__':
             ds = xr.open_dataset(fn, decode_times=False)
             ds_arr.append(ds)
 
-            fn = P(ppe_dir, file_clisccp_nm.replace('.nc', '_'+exp_grp+'.nc'))
+            fn = P(ppe_clisccp_dir, file_clisccp_nm.replace('.nc', '_'+exp_grp+'.nc'))
             ds = xr.open_dataset(fn, decode_times=False)
             ds_clisccp_arr.append(ds)
 
