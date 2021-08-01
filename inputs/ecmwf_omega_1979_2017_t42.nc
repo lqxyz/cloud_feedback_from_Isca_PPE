@@ -1,0 +1,1 @@
+/disca/share/ql260/obs_datasets/ecmwf_data/ecmwf_omega_1979_2017_t42.nc
