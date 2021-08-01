@@ -279,6 +279,7 @@ if __name__ == '__main__':
     print('zonal mean profile changes..')
     fig_name = P(fig_dir, 'zonal_mean_profile_change_basic_fields_ensemble_mean.pdf')
     zonal_mean_profile_change_inc_reff(dst_ds1, dst_ds2, figname=fig_name)
+    print(fig_name, 'saved')
 
     # print('zonal mean profile changes..')
     # fig_name = P(fig_dir, 'zonal_mean_profile_change_basic_fields_ensemble_mean_stippling.pdf')
