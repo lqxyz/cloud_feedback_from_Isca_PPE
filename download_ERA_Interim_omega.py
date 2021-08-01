@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 from __future__ import print_function
 import os
 try:
@@ -22,9 +23,9 @@ month_str = '/'.join(month_list)
 var_names = ['omega']
 params = ["135.128"]
 for var, param in zip(var_names, params):
-
     print(var)
-    target_fn = 'ecmwf_'+var+'_'+str(start_year)+'_'+str(end_year)+'.nc',
+    target_fn = 'ecmwf_' + var + '_' + str(start_year) + '_' + str(end_year) + '.nc'
+
     server.retrieve({
         "class": "ei",
         "dataset": "interim",
@@ -41,4 +42,5 @@ for var, param in zip(var_names, params):
     })
     print('Remap the data to T42')
     os.system("cdo remapbil,t42grid " + target_fn + " " + target_fn.replace('.nc', '_t42.nc'))
+    os.remove(target_fn)
 
