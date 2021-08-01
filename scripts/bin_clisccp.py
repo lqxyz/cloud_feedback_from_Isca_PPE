@@ -3,6 +3,7 @@ mpl.use('Agg')
 import os
 import sys
 import numpy as np
+from scipy import stats
 import xarray as xr
 import warnings
 warnings.simplefilter(action='ignore')
