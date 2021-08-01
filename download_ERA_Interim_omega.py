@@ -2,10 +2,12 @@
 
 from __future__ import print_function
 import os
+import sys
 try:
     from ecmwfapi import ECMWFDataServer
 except:
     print("Error: Please install ecmwfapi following the instructions on https://github.com/ecmwf/ecmwf-api-client")
+    sys.exit(1)
 
 server = ECMWFDataServer()
 start_year = 1979
