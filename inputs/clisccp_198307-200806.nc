@@ -1,0 +1,1 @@
+/disca/share/ql260/obs_datasets/isccp_data/isccp_simulator/clisccp_198307-200806.nc
