@@ -10,8 +10,6 @@ $ ./download_dataset.sh
 #### How to reproduce the figures
 
 ```bash
-# Download the input dataset and some need to download manually from Zenodo
-$ ./download_dataset.sh
 $ ./runall.sh
 ```
 

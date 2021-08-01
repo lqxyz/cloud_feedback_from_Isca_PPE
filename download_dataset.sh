@@ -14,3 +14,7 @@ echo "Cloud kernel data saved in $outdir"
 echo "Download ISCCP observation data" 
 wget -c -N --directory-prefix=$outdir --no-check-certificate https://climserv.ipsl.polytechnique.fr/cfmip-obs/data/ISCCP/clisccp_198307-200806.nc
 
+echo "Download ERA-Interim omega data"
+python -u download_ERA_Interim_omega.py
+echo "Done! ERA-Interim omega downloaded!"
+
