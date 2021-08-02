@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
     c = cdsapi.Client()
 
-    dt_dir = '../inputs/ERA5'
+    dt_dir = './inputs/ERA5'
     if not os.path.exists(dt_dir):
         os.mkdir(dt_dir)
 
