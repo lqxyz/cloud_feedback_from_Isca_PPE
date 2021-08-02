@@ -200,6 +200,6 @@ if __name__ == '__main__':
         col_names = ['LW', 'SW', 'Net']
         tbl = pd.DataFrame(data=table, index=row_names, columns=col_names)
         file_name = P(dt_dir, 'slope_of_delta_CRE_and_R_'+str(nyr)+'yr.csv')
-        tbl.to_csv(file_name, header=True, index=True, float_format="%.3f")
+        tbl.to_csv(file_name, header=True, index=True, float_format="%.8f")
         print(file_name, 'saved')
 
