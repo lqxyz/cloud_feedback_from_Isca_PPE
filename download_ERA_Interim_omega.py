@@ -24,9 +24,10 @@ month_str = '/'.join(month_list)
 #params = ["131.128", "132.128", "135.128"]
 var_names = ['omega']
 params = ["135.128"]
+dt_dir = '../inputs/'
 for var, param in zip(var_names, params):
     print(var)
-    target_fn = 'ecmwf_' + var + '_' + str(start_year) + '_' + str(end_year) + '.nc'
+    target_fn = os.path.join(dt_dir, 'ecmwf_' + var + '_' + str(start_year) + '_' + str(end_year) + '.nc')
 
     server.retrieve({
         "class": "ei",
