@@ -11,6 +11,20 @@ wget -c -N --directory-prefix=$outdir https://github.com/mzelinka/cloud-radiativ
 wget -c -N --directory-prefix=$outdir https://github.com/mzelinka/cloud-radiative-kernels/raw/master/data/obs_cloud_kernels3.nc
 echo "Cloud kernel data saved in $outdir"
 
+echo "Download Zelinka et al (2021) data"
+dt_dir=$outdir/zelinka_data
+[[ ! -f $dt_dir ]] && mkdir $dt_dir
+
+fn_arr=("cmip56_forcing_feedback_ecs.json" \
+        "cmip5_amip4K_cld_fbks.json" \
+        "cmip5_amip_cld_errs.json" \
+        "cmip6_amip-p4K_cld_fbks.json" \
+        "cmip6_amip_cld_errs.json")
+for fn in "${fn_arr[@]}"
+do
+    wget -c -N --directory-prefix=$dt_dir https://raw.githubusercontent.com/mzelinka/assessed-cloud-fbks/master/data/$fn
+done
+
 echo "Download ISCCP observation data" 
 wget -c -N --directory-prefix=$outdir --no-check-certificate https://climserv.ipsl.polytechnique.fr/cfmip-obs/data/ISCCP/clisccp_198307-200806.nc
 
