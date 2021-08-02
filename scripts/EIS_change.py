@@ -71,7 +71,7 @@ def get_ctrl_perturb_ds_arr(exp_grps, file_nms, ppe_dir):
 if __name__ == '__main__':
     P = os.path.join
 
-    fig_dir = '../figs/check_EIS_change'
+    fig_dir = '../figs/'
     if not os.path.exists(fig_dir):
         os.mkdir(fig_dir)
     dt_dir = '../data/'
