@@ -22,6 +22,7 @@ if __name__ == '__main__':
     exp_grps = list(exp_tbl.iloc[:, 0])
     markers = list(exp_tbl.iloc[:, 2])
 
+    '''
     tbl_names = ['toa_sw_cre', 'toa_lw_cre', 'toa_net_cre',
                 'low_cld_amt', 'mid_cld_amt', 'high_cld_amt', 'tot_cld_amt',
                 'cwp', 'low_cwp', 'mid_cwp', 'high_cwp',
@@ -33,10 +34,10 @@ if __name__ == '__main__':
                  #'optical depth'
                 ]
     units_arr1 = [r'W m$^{-2}$'] * 3 + ['%'] * 4 + [r'g m$^{-2}$'] * 4 #+ ['']
-
-    # tbl_names = ['low_cld_amt']
-    # tbl_titles = ['low cldamt']
-    # units_arr1 = ['%']
+    '''
+    tbl_names = ['low_cld_amt']
+    tbl_titles = ['low cldamt']
+    units_arr1 = ['%']
 
     proxy = sys.argv[1].upper() # ELF, or EIS
     #proxy = 'EIS'
