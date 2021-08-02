@@ -1,5 +1,8 @@
 #!/usr/bin/env python
-
+'''
+Myers and Norris, 2016, GRL
+Scott et al., 2020
+'''
 from __future__ import print_function
 import numpy as np
 import xarray as xr
