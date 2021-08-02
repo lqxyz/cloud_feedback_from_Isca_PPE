@@ -18,3 +18,7 @@ echo "Download ERA-Interim omega data"
 python -u download_ERA_Interim_omega.py
 echo "Done! ERA-Interim omega downloaded!"
 
+echo "Download ERA5 single level dataset: temp, slp and sea ice"
+python -u download_ERA5_single_lev.py
+echo "Done! ERA5 single-lev data downloaded!"
+
