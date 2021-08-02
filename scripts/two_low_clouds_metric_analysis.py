@@ -373,7 +373,7 @@ if __name__ == '__main__':
                     exp_names = [exp_grp + '_ctrl', exp_grp + '_perturb']
                     diff_dt = var_cu_profs[exp_names[1]][varnm] - var_cu_profs[exp_names[0]][varnm]
                     l = ax.plot(diff_dt * coeff, pfulls, ls='-', color=colors[i],
-                                label=exp_grp) #, marker=marker, ms=4, )
+                                label=exp_grp, marker=marker, ms=4)
                     lines.extend(l)
                 ax.set_ylim(ylim)
                 ax.set_xlim(xlim)
@@ -384,7 +384,7 @@ if __name__ == '__main__':
                 for i, (exp_grp, marker) in enumerate(zip(exp_grps, markers)):
                     exp_names = [exp_grp + '_ctrl', exp_grp + '_perturb']
                     diff_dt = var_sc_profs[exp_names[1]][varnm] - var_sc_profs[exp_names[0]][varnm]
-                    ax.plot(diff_dt * coeff, pfulls, ls='-', color=colors[i]) #, marker=marker, ms=4)
+                    ax.plot(diff_dt * coeff, pfulls, ls='-', color=colors[i], marker=marker, ms=4)
                 ax.set_ylim(ylim)
                 ax.set_xlim(xlim)
                 ax.invert_yaxis()
