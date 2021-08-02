@@ -24,7 +24,7 @@ print('Height=', HEIGHT)
 fig_dir = Path('../figs/')
 if not fig_dir.exists():
     fig_dir.mkdir()
-data_dir = Path('../data/zelinka_data')
+data_dir = Path('../inputs/zelinka_data')
 
 #######################################################
 ########### DEFINE COLORS FOR ECS COLORBAR ############
