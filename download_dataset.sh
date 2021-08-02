@@ -26,8 +26,12 @@ for fn in "${fn_arr[@]}"
 do
     wget -c -N --directory-prefix=$dt_dir https://raw.githubusercontent.com/mzelinka/assessed-cloud-fbks/master/data/$fn
 done
-ln -s $outdir/cloud_kernels2.nc $dt_dir/
-ln -s $outdir/obs_cloud_kernels3.nc $dt_dir/
+cd $dt_dir
+for fn in cloud_kernels2.nc obs_cloud_kernels3.nc
+do
+    [[ ! -f $fn ]] && rm $fn && ln -s ../$fn
+done
+cd ../..
 
 echo "Download ISCCP observation data" 
 wget -c -N --directory-prefix=$outdir --no-check-certificate https://climserv.ipsl.polytechnique.fr/cfmip-obs/data/ISCCP/clisccp_198307-200806.nc

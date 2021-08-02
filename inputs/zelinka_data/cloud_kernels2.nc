@@ -1,1 +1,1 @@
-./inputs//cloud_kernels2.nc
+../cloud_kernels2.nc
