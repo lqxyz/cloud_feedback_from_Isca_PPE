@@ -29,7 +29,7 @@ done
 cd $dt_dir
 for fn in cloud_kernels2.nc obs_cloud_kernels3.nc
 do
-    [[ ! -f $fn ]] && rm $fn && ln -s ../$fn
+    [[ -L $fn ]] && rm $fn && ln -s ../$fn
 done
 cd ../..
 
