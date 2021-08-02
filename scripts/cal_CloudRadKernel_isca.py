@@ -456,8 +456,8 @@ def do_klein_calcs(ctl_clisccp, LWK, SWK, obs_clisccp_AC, ctl_clisccp_wap,
         Ksw = SWK[:,:,PP,:]
 
         obs_C1 = obs_clisccp_AC[:,:,PP,:]
-        ocn_obs_C1,lnd_obs_C1 = apply_land_mask_v2(obs_C1)
-        ocn_C1, lnd_C1 = apply_land_mask_v2(C1)
+        ocn_obs_C1,lnd_obs_C1 = apply_land_mask_v2(obs_C1, land_mask_dir=land_mask_dir)
+        ocn_C1, lnd_C1 = apply_land_mask_v2(C1, land_mask_dir=land_mask_dir)
 
         WTS = get_area_wts(obs_C1[:,0,0,:]) # summing this over lat and lon = 1
         #print('WTS:', WTS.shape)
@@ -594,7 +594,7 @@ def CloudRadKernel(ds_arr):
             # [sec][flavor][region][all / ocn / lnd / ocn_asc / ocn_dsc]
             fbk_dict[sec][fbk_name] = {}
             data = xr.DataArray(output1[n], dims=TLL_dims, coords=TLL_coords)
-            ocn_data, lnd_data = apply_land_mask_v2(data) #apply_land_mask_v3(data,OCN,LND)
+            ocn_data, lnd_data = apply_land_mask_v2(data, land_mask_dir=land_mask_dir) #apply_land_mask_v3(data,OCN,LND)
             lats = data.lat
             for r in mx:
                 if r == 100:
