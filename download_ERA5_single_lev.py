@@ -11,7 +11,7 @@ except:
 if __name__ == '__main__':
     c = cdsapi.Client()
 
-    dt_dir = './inputs/ERA5'
+    dt_dir = './inputs/'
     if not os.path.exists(dt_dir):
         os.mkdir(dt_dir)
     target_fn = os.path.join(dt_dir, 'ERA5_temp_wind_seaice_monthly_single_level_1979_2019.nc')
