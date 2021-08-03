@@ -174,13 +174,17 @@ if __name__ == '__main__':
     # #make_all_figs()
 
     #add_legend = True
-    add_legend = int(sys.argv[1]) == 1
+    if len(sys.argv) == 2:
+        add_legend = int(sys.argv[1]) == 1
+    else:
+        add_legend = True
 
     fig_dir = Path('../figs/')
     if not fig_dir.exists():
         fig_dir.mkdir()
 
     data_dir = Path('../inputs/zelinka_data')
+    isca_data_dir = Path('../data/zelinka_data')
 
     ##################################################################
     # READ IN CLOUD FEEDBACK VALUES FOR CMIP5/6 and Isca
@@ -199,8 +203,8 @@ if __name__ == '__main__':
         cld_errs6 = json.load(f)
 
     # For Isca
-    isca_cld_fbk_fn = data_dir  / 'isca_cld_fbks.json'
-    isca_cld_err_fn = data_dir  / 'isca_cld_errs.json'
+    isca_cld_fbk_fn = isca_data_dir / 'isca_cld_fbks.json'
+    isca_cld_err_fn = isca_data_dir / 'isca_cld_errs.json'
     with open(isca_cld_fbk_fn, 'r') as f:
         cld_fbks_isca = json.load(f)
     with open(isca_cld_err_fn, 'r') as f:
@@ -214,7 +218,7 @@ if __name__ == '__main__':
     ecs_dict5 = ecs['CMIP5']
     ecs_dict6 = ecs['CMIP6']
 
-    isca_forcing_ecs_fn = data_dir  / 'isca_forcing_ECS.json'
+    isca_forcing_ecs_fn = isca_data_dir / 'isca_forcing_ECS.json'
     with open(isca_forcing_ecs_fn, 'r') as f:
         ecs_dict_isca = json.load(f)['isca']
 
