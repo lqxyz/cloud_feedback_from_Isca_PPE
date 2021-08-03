@@ -23,8 +23,8 @@ if __name__ == '__main__':
         'product_type': 'monthly_averaged_reanalysis',
         'grid': '1.0/1.0', # resolution
         'variable': [
-            '10m_u_component_of_wind', '10m_v_component_of_wind', 
-            '2m_dewpoint_temperature', '2m_temperature', 
+            '10m_u_component_of_wind', '10m_v_component_of_wind',
+            '2m_dewpoint_temperature', '2m_temperature',
             'mean_sea_level_pressure',
             'sea_ice_cover', 'sea_surface_temperature',
             'skin_temperature', 'surface_pressure',
@@ -58,4 +58,3 @@ if __name__ == '__main__':
     print('Remap the data to T42')
     os.system("cdo remapbil,t42grid " + target_fn + " " + target_fn.replace('.nc', '_t42.nc'))
     os.remove(target_fn)
-

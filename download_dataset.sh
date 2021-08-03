@@ -2,7 +2,7 @@
 
 outdir=./inputs/
 
-# # Delete the symbol link files before downloading 
+# # Delete the symbol link files before downloading
 # find $outdir -type l -delete
 
 echo "Download cloud radiative kernel data from Zelinka et al (2012)"
@@ -33,7 +33,7 @@ do
 done
 cd ../..
 
-echo "Download ISCCP observation data" 
+echo "Download ISCCP observation data"
 wget -c -N --directory-prefix=$outdir --no-check-certificate https://climserv.ipsl.polytechnique.fr/cfmip-obs/data/ISCCP/clisccp_198307-200806.nc
 
 echo "Download ERA-Interim omega data"

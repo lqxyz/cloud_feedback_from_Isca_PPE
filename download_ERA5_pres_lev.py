@@ -15,7 +15,7 @@ if __name__ == '__main__':
                 'temperature',
                 # 'vorticity',
                 # 'potential_vorticity',
-                # 'divergence', 
+                # 'divergence',
                 # 'specific_snow_water_content',
                 # 'fraction_of_cloud_cover',
                 # 'geopotential',
@@ -23,7 +23,7 @@ if __name__ == '__main__':
                 # 'specific_cloud_liquid_water_content',
                 # 'specific_rain_water_content',
                 # 'u_component_of_wind',
-                # 'v_component_of_wind', 
+                # 'v_component_of_wind',
                 ]
 
     c = cdsapi.Client()
@@ -82,7 +82,7 @@ if __name__ == '__main__':
             'time': '00:00',
         },
         target_fn)
+
         print('Remap ' + var +' to T42')
         os.system("cdo remapbil,t42grid " + target_fn + " " + target_fn.replace('.nc', '_t42.nc'))
         os.remove(target_fn)
-
