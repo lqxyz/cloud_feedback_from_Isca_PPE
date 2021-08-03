@@ -9,7 +9,7 @@ Analyze the cloud feedbacks from Isca perturbed parameter ensemble (PPE) simulat
     ```
 
 ### How to reproduce the figures
-* Reproduce the figures and tables by running the following command, and the output data and figures can be found in`data` and `figs` folders.
-    ```bash
-    $ ./runall.sh
-    ```
+Reproduce the figures and tables by running the following command, and the output data and figures can be found in`data` and `figs` folders.
+```bash
+$ ./runall.sh
+```
