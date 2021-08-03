@@ -681,6 +681,7 @@ def make_all_figs(exp_grps, exp_markers, isca_cld_fbk_fn, isca_cld_err_fn, isca_
     pl.savefig(fig_dir / 'WCRP_unassessed_cld_fbks_amip-p4K.pdf', bbox_inches='tight')
     pl.savefig(fig_dir / 'WCRP_unassessed_cld_fbks_amip-p4K.png', bbox_inches='tight', transparent=False, dpi=200)
 
+    '''
     ################################################################################################
     # ERROR METRIC OF MODEL AGREEMENT WITH INDIVIDUAL CLOUD FEEDBACKS
     ################################################################################################
@@ -849,7 +850,6 @@ def make_all_figs(exp_grps, exp_markers, isca_cld_fbk_fn, isca_cld_err_fn, isca_
     ax2.set_ylabel('$\mathrm{E_{NET}}$', size=14)
     pl.savefig(fig_dir / 'WCRP_assessed_RMSE_v_cldfbk2_amip-p4K.pdf', bbox_inches='tight')
 
-    '''
     ######################################################
     # Plot Klein error metrics vs cloud feedback & RMSE:
     ######################################################
@@ -902,7 +902,7 @@ def make_all_figs(exp_grps, exp_markers, isca_cld_fbk_fn, isca_cld_err_fn, isca_
     pl.savefig(fig_dir / 'WCRP_totcldfbks2_v_E_NET_amip-p4K.pdf', bbox_inches='tight')
     '''
 
-
+    '''
     #######################################################
     # PRINT OUT THE TABLE OF EVERYTHING:
     #######################################################
@@ -1130,6 +1130,7 @@ def make_all_figs(exp_grps, exp_markers, isca_cld_fbk_fn, isca_cld_err_fn, isca_
             format(data[0],data[1],data[2],data[3],data[4],data[5],
                    data[6],data[7],data[8],data[9],data[10]), file=f)
         print(dash, file=f)
+    '''
 
 if __name__ == '__main__':
     #newmod = 'GFDL-CM4'
