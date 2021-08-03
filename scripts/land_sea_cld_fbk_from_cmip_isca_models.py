@@ -356,7 +356,7 @@ if __name__ == '__main__':
             if add_legend:
                 fig.legend(new_lines, new_labels, loc='b', ncols=6)
             else:
-                fig_name = fig_name.replace('.pdf', '_no_legend.pdf')
+                fig_name = str(fig_name).replace('.pdf', '_no_legend.pdf')
 
             fig.savefig(fig_name, bbox_inches='tight', pad_inches=0.1, transparent=False)
             fig.savefig(Path(str(fig_name).replace('.pdf', '.png')), bbox_inches='tight', pad_inches=0.1, transparent=False, dpi=200)
@@ -450,7 +450,7 @@ if __name__ == '__main__':
         if add_legend:
             fig.legend(new_lines, new_labels, loc='b', ncols=6)
         else:
-            fig_name = fig_name.replace('.pdf', '_no_legend.pdf')
+            fig_name = str(fig_name).replace('.pdf', '_no_legend.pdf')
 
         fig.savefig(fig_name, bbox_inches='tight', pad_inches=0.1, transparent=False)
         fig.savefig(Path(str(fig_name).replace('.pdf', '.png')), bbox_inches='tight', pad_inches=0.1, transparent=False, dpi=200)
