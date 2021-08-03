@@ -84,7 +84,8 @@ def get_isca_forcing_ecs(exp_grps, isca_forcing_ecs_fn):
     #         (ERF2x:2.9, CLD:, ECS:, LWCLD:, SWCLD:)
     dt_dir = Path('../data')
     # This file is produced by 'get_forcing_slope_ecs.py'
-    ecs_fn = dt_dir / 'forcing_slope_ECS_qflux_PPE_nyr_20_22.csv'
+    # ecs_fn = dt_dir / 'forcing_slope_ECS_qflux_PPE_nyr_20_22.csv'
+    ecs_fn = dt_dir / 'forcing_slope_ECS_qflux_PPE_nyr_30_12.csv'
     ecs_tbl = pd.read_csv(ecs_fn, index_col=0)
     
     variant = 'r1i1p1f1'
