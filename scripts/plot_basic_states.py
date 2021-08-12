@@ -44,7 +44,8 @@ if __name__ == '__main__':
     exp_tbl = pd.read_csv('isca_qflux_exps_for_plots.csv', header=0)
     exp_grps = list(exp_tbl.iloc[:, 0])
 
-    exp_tbl2 = pd.read_csv('isca_qflux_exps.csv', header=0)
+    #exp_tbl2 = pd.read_csv('isca_qflux_exps.csv', header=0)
+    exp_tbl2 = pd.read_csv('isca_qflux_exps2.csv', header=0)
     exp_grps2 = list(exp_tbl2.iloc[:, 0])
     markers2 = list(exp_tbl2.iloc[:, 2])
     exp_grps2_dst = [x for x in exp_grps2 if x!='Tmin_m20' and x!='qcl_T_0.17']
