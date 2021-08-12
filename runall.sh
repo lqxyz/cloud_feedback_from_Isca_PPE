@@ -8,6 +8,9 @@ python -u verify_cosp_in_isca.py
 echo -e "\n$(date) Evaluate clisccp in ascending and descending dynamical regimes in tropical regions"
 python -u evaluate_clisccp_obs_isca_together.py
 
+echo -e "\n$(date) Check the basic states (surface temperature) of all the PPE runs"
+python -u plot_basic_states.py
+
 # Ensemble mean profile of PPE
 echo -e "\n$(date) PPE profiles changes for baisc states"
 python -u profile_changes_PPE.py
