@@ -6,7 +6,6 @@ import matplotlib.ticker as ticker
 import netCDF4
 from isca.util import interpolate_output
 
-
 def open_experiment(exp_folder_name, start_file, end_file, file_name='atmos_monthly.nc', nbits=4, base_dir=None, decode_times=False):
     """
     Modified from 

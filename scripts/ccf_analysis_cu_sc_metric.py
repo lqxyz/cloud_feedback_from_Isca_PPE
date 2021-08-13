@@ -1,12 +1,10 @@
 #!/usr/bin/env python
-
 from __future__ import print_function
 import numpy as np
 import xarray as xr
 import pandas as pd
 import os
 import sys
-sys.path.append('../../scripts')
 from analysis_functions import add_datetime_info, detrend_dim
 from isca_cre_cwp import (calc_toa_cre_for_isca, get_gm,
     calc_total_cwp_for_isca, calc_low_mid_high_cwp_for_isca)
